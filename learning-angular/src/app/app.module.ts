@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ContentcardComponent } from './contentcard/contentcard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContentcardComponent
   ],
   imports: [
     BrowserModule
