@@ -1,0 +1,8 @@
+<div class="content{{game.id}}">
+  <div class ="title">Title: {{ game.title }}</div>
+  <div class ="author">Author: {{ game.author }}</div>
+  <img class="main-image" (click)="onclickImg()" *ngIf="game.imgUrl" src="{{game.imgUrl}}">
+  <div class="body">Description: {{game.body}}</div>
+  <div class="genre" *ngIf="game.genre">Genre: {{game.genre}}</div>
+  <div class="tags" *ngIf="game.tags">Tags: {{game.tags}}</div>
+</div>

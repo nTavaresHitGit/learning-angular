@@ -1,0 +1,28 @@
+:host{
+  width: 400px;
+  display: block;
+  margin: 24px auto;
+  border: 3px solid dimgrey;
+  box-shadow: 5px 10px 8px #888888;
+}
+:host.is-last{
+  border: 2px black solid;
+}
+.title {
+  font-size: 20px;
+  text-align: center;
+  text-underline: black;
+}
+.title:hover {
+  text-decoration: underline;
+}
+.author{
+  font-size: 12px;
+  text-align: center;
+}
+.main-image {
+  width: 400px;
+}
+.tags {
+  font-style: italic;
+}

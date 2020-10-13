@@ -1,0 +1,6 @@
+<app-content-list *ngFor="let individualGame of gameLists; index as i last as isLast" [game]="individualGame"
+                  class="content-card-{{i}}" [class.is-last]="isLast">
+
+</app-content-list>
+
+
