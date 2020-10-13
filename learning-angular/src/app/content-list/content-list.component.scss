@@ -1,0 +1,20 @@
+:host{
+  width: 400px;
+  display: block;
+  margin: 24px auto;
+  border: 3px dashed goldenrod;
+}
+:host.is-last{
+  border: 2px black solid;
+}
+.title {
+  font-size: 20px;
+  text-align: center;
+}
+.author{
+  font-size: 12px;
+  text-align: center;
+}
+.main-image {
+  width: 400px;
+}

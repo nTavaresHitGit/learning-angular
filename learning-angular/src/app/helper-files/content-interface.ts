@@ -1,7 +1,8 @@
 export interface Content{
   id: number;
-  author: string;
-  imgUrl?: string;
+  author?: string;
+  genre: string;
+  imgUrl: string;
   type?: string;
   title: string;
   body: string;
