@@ -14,4 +14,7 @@ export class ContentListComponent implements OnInit {
 
   }
 
+  onclickImg(): void {
+    console.log(this.game.id);
+  }
 }
