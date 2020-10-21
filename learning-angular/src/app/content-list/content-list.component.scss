@@ -8,6 +8,12 @@
 :host.is-last{
   border: 2px black solid;
 }
+:host.isMMO{
+  border: 3px solid goldenrod;
+}
+:host.isOpen{
+  border: 3px solid greenyellow;
+}
 .title {
   font-size: 20px;
   text-align: center;
@@ -26,3 +32,4 @@
 .tags {
   font-style: italic;
 }
+

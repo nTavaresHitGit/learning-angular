@@ -1,6 +1,17 @@
-<app-content-list *ngFor="let individualGame of gameLists; index as i last as isLast" [game]="individualGame"
-                  class="content-card-{{i}}" [class.is-last]="isLast">
+<input type="text" #contentTitle> <button (click)="submitInput(contentTitle.value, gameLists)">Search</button>
+<br>
+<h2>MMOS's</h2>
+<app-content-list *ngFor="let individualGame of (gameLists | firstType: 'MMORPG'); index as i genre as isMMO"
+                  [game]="individualGame"
+                  class="isMMO" [class.is-MMO]="isMMO">
 
 </app-content-list>
+<h2 class="titles">Openworld</h2>
+<app-content-list *ngFor="let individualGame of (gameLists | firstType: 'Openworld'); index as i genre as isOpen"
+                  [game]="individualGame"
+                  class="isOpen" [class.is-Open]="isOpen">
+
+</app-content-list>
+
 
 
