@@ -1,8 +1,29 @@
 <div class="content{{game.id}}">
-  <div class ="title">Title: {{ game.title }}</div>
+  <div appHoverStyle [type]= '"title"' class ="title">Title: {{ game.title }}</div>
   <div class ="author">Author: {{ game.author }}</div>
-  <img class="main-image" (click)="onclickImg()" *ngIf="game.imgUrl" src="{{game.imgUrl}}">
+  <div [ngSwitch]='game.imgUrl'>
+    <div *ngSwitchCase='"League"'><img
+      src="https://lh3.googleusercontent.com/WebglHOYlW-2P7ADP9oUSSrgy12PHyAE6GP_jmJkQOZZ1XH7Pa_7216EK2qS7iJFvncqOaDjg40BrYdzPbB9qNwn" height="200"
+      width="400" ></div>
+    <div *ngSwitchCase='"RO"'><img
+      src="https://assets.primagames.com/media/files/ragnarok-revo-classic-2.png/PRIMA/resize/618x0" height="200"
+      width="400"></div>
+    <div *ngSwitchCase='"Fly"'><img
+      src="https://www.gamex.ph/nas/goods/G00000000345/G00000000345_6.jpg" height="200"
+      width="400"></div>
+    <div *ngSwitchCase='"WOW"'><img
+      src="https://upload.wikimedia.org/wikipedia/en/9/91/WoW_Box_Art1.jpg" height="400"
+      width="400"></div>
+    <div *ngSwitchCase='"MC"'><img
+      src="https://images-na.ssl-images-amazon.com/images/I/512dVKB22QL.png" height="300"
+      width="400"></div>
+    <div *ngSwitchDefault><img
+      src="https://actionreactionmma.com/wp-content/uploads/2017/04/default-image-620x600.jpg" height="400"
+      width="400"></div>
+  </div>
+
   <div class="body">Description: {{game.body}}</div>
   <div class="genre" *ngIf="game.genre">Genre: {{game.genre}}</div>
-  <div class="tags" *ngIf="game.tags">Tags: {{game.tags}}</div>
+  <div>Tags:</div>
+  <div appHoverStyle [type]= '"tags"' *ngFor="let item of game.tags" class="tags" > {{item}} </div>
 </div>
