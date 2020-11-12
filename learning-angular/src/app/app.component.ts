@@ -72,5 +72,11 @@ export class AppComponent {
     console.log('There are no games with this title!');
   }
   }
+
+  addGameToList(newGameFromChild: Content): void {
+    this.gameLists.push(newGameFromChild);
+    // Cloning list
+    this.gameLists = Object.assign([], this.gameLists);
+  }
 }
 

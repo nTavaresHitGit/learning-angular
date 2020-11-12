@@ -1,3 +1,6 @@
+<app-create-content (newGameEvent)="addGameToList($event)"></app-create-content>
+
+<h1>Search games!</h1>
 <input type="text" #contentTitle> <button (click)="submitInput(contentTitle.value, gameLists)">Search</button>
 <br>
 <h2>MMOS's</h2>
