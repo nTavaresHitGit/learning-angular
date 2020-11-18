@@ -1,5 +1,9 @@
+
+<br>
+<h1>Search genres!</h1>
 <input type="text" #contentTitle> <button (click)="submitInput(contentTitle.value, gameLists)">Search</button>
 <br>
+<app-messages></app-messages>
 <h2>MMOS's</h2>
 <app-content-list *ngFor="let individualGame of (gameLists | firstType: 'MMORPG'); index as i genre as isMMO"
                   [game]="individualGame"
