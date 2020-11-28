@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     // this.gameLists = this.contentService.getGames();
     this.contentService.getGamesObs().subscribe(gl => {
+      this.messageService.add('Game content Returned!');
       this.gameLists = gl;
     });
   }
@@ -36,6 +37,14 @@ export class AppComponent implements OnInit {
   if (i === 0){
     console.log('There are no games with this title!');
   }
+  }
+  addGameToList(newGameFromChild: Content): void {
+    console.log('Item coming in', newGameFromChild);
+    console.log('Array prior to addition', this.gameLists);
+    this.gameLists.push(newGameFromChild);
+    // Cloning list
+    this.gameLists = Object.assign([], this.gameLists);
+    console.log('Array after addition', this.gameLists);
   }
 }
 

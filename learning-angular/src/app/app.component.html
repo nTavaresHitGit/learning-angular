@@ -1,4 +1,4 @@
-
+<app-create-component (newGameEvent)="addGameToList($event)"></app-create-component>
 <br>
 <h1>Search genres!</h1>
 <input type="text" #contentTitle> <button (click)="submitInput(contentTitle.value, gameLists)">Search</button>

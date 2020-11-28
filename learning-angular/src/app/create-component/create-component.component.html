@@ -1,0 +1,7 @@
+<h1>Please enter a game!</h1>
+Game Title: <input #name [(ngModel)]="newGame.title" required /> <br />
+Your Name: <input #author [(ngModel)]="newGame.author" /> <br />
+Game Genre: <input #genre [(ngModel)]="newGame.genre" /> <br />
+Describe the game!: <input #body [(ngModel)]="newGame.body" /> <br />
+Game image: <input #img [(ngModel)]="newGame.imgUrl" /> <br />
+<button (click)="addGame()">Add Game</button>
