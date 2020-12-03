@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Add Content</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Game Title </mat-label>
+    <input matInput placeholder="Title" #name [(ngModel)]="newGame.title" required />
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Your Name</mat-label>
+    <input matInput placeholder="Name" #author [(ngModel)]="newGame.author" />
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Game Genre</mat-label>
+    <input matInput placeholder="Genre" #genre [(ngModel)]="newGame.genre" />
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Describe the game!</mat-label>
+    <input matInput placeholder="Description" #body [(ngModel)]="newGame.body" />
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Game image</mat-label>
+    <input matRipple matInput placeholder="Image" #img [(ngModel)]="newGame.imgUrl" />
+  </mat-form-field>
+  <br>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Add Content</button>
+</div>
